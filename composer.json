@@ -1,0 +1,21 @@
+{
+    "name": "swissengine/doctrine-module-extension",
+    "description": "Extension of Doctrine CLI tools",
+    "license": "MIT",
+    "keywords": [
+        "swissengine",
+        "zf2",
+        "doctrine"
+    ],
+    "require": {
+        "php": ">=5.5"
+    },
+    "autoload": {
+        "classmap" : ["Module.php"]
+    },
+    "authors": [
+        {
+            "name": "SwissEngine"
+        }
+    ]
+}
