@@ -1,6 +1,7 @@
 <?php
 namespace SwissEngine\Tools\Doctrine\Extension;
 
+use Doctrine\ORM\Tools\Console\Helper\EntityManagerHelper;
 use Symfony\Component\Console\Input\ArgvInput;
 use Symfony\Component\Console\Input\InputOption;
 use Zend\EventManager\Event;
