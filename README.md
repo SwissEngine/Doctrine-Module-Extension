@@ -1,4 +1,4 @@
-SwissEngine\ErrorHandler
+SwissEngine\Tools\Doctrine\Extension
 ===============
 This small module aims at providing a simple way to add a few features (seamlessly) to the doctrine CLI tool (ZF2) such as the ability to specify the entity manager we want to use optionally.
 
