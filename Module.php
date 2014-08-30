@@ -1,6 +1,7 @@
 <?php
 namespace SwissEngine\Tools\Doctrine\Extension;
 
+use Doctrine\DBAL\Tools\Console\Helper\ConnectionHelper;
 use Doctrine\ORM\Tools\Console\Helper\EntityManagerHelper;
 use Symfony\Component\Console\Input\ArgvInput;
 use Symfony\Component\Console\Input\InputOption;
@@ -41,6 +42,7 @@ class Module
             /* @var $entityManager \Doctrine\ORM\EntityManager */
             $entityManager = $serviceLocator->get(sprintf('doctrine.entitymanager.%s', $em));
             $helperSet     = $cli->getHelperSet();
+            $helperSet->set(new ConnectionHelper($entityManager->getConnection()), 'db');
             $helperSet->set(new EntityManagerHelper($entityManager), 'em');
         }
     }
