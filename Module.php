@@ -14,9 +14,9 @@ class Module
     {
         // Make sure this is executed last
         $events = $manager->getEventManager();
-        $events->getSharedManager()->attach('doctrine', 'loadCli.post', [
+        $events->getSharedManager()->attach('doctrine', 'loadCli.post', array(
             $this, 'setEntityManager'
-        ], -1000);
+        ), -1000);
     }
 
     public function setEntityManager(Event $e) {
